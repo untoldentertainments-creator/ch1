@@ -1,0 +1,733 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>LAUGH TALE by UNTOLD — Dec 06 Pawffe</title>
+<!-- Google Fonts: Editorial Serif, Monospace & Modern Display Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&amp;family=Instrument+Serif:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN with forms & container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#05070a',
+              card: 'rgba(13, 18, 30, 0.72)',
+              border: 'rgba(255, 255, 255, 0.08)',
+              accent: '#f59e0b',
+              gold: '#EAB308',
+              sky: '#38bdf8',
+              crimson: '#ef4444'
+            }
+          },
+          fontFamily: {
+            editorial: ['"Instrument Serif"', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            mono: ['"Space Mono"', 'monospace'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Bebas Neue"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles: Typography & Atmospheric Lighting -->
+<style data-purpose="custom-typography">
+    .font-editorial-italic {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+    }
+    .text-glow {
+      text-shadow: 0 0 25px rgba(245, 158, 11, 0.45), 0 0 50px rgba(239, 68, 68, 0.25);
+    }
+    .text-glow-red {
+      text-shadow: 0 0 35px rgba(239, 68, 68, 0.7), 0 0 70px rgba(239, 68, 68, 0.35);
+    }
+  </style>
+<style data-purpose="layout-effects">
+    body {
+      background-color: #05070b;
+      color: #e2e8f0;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(245, 158, 11, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 85% 65%, rgba(56, 189, 248, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 50% 90%, rgba(239, 68, 68, 0.04) 0%, transparent 60%);
+      background-attachment: fixed;
+    }
+    .glass-card {
+      background: rgba(11, 16, 26, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card-hover:hover {
+      border-color: rgba(245, 158, 11, 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8);
+    }
+    .marquee-inner {
+      animation: marquee 26s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-neutral-300 selection:bg-amber-400 selection:text-black">
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-[#05070b]/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<!-- Left brand chapter stamp -->
+<div class="flex items-center space-x-3">
+<span class="font-cinzel tracking-[0.25em] text-white font-bold text-sm">UNTOLD</span>
+<span class="text-neutral-500 text-xs">/</span>
+<span class="font-mono text-[11px] text-neutral-400 tracking-wider uppercase">CHAPTER 01</span>
+</div>
+<!-- Navigation links -->
+<nav class="hidden md:flex items-center space-x-8 text-xs font-mono uppercase tracking-widest text-neutral-400">
+<a class="hover:text-amber-300 transition-colors duration-200" href="#about">About</a>
+<a class="hover:text-amber-300 transition-colors duration-200" href="#passes">Passes</a>
+<a class="hover:text-amber-300 transition-colors duration-200" href="#venue">Venue</a>
+<a class="hover:text-amber-300 transition-colors duration-200" href="#rules">Rules</a>
+</nav>
+<!-- Right utility items -->
+<div class="flex items-center space-x-3 sm:space-x-4">
+<div class="hidden sm:flex items-center space-x-2 px-2.5 py-1 rounded-full border border-white/10 bg-white/[0.02] text-[10px] font-mono text-neutral-400">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+<span>HYD · IST</span>
+</div>
+<a class="px-3.5 py-1.5 text-xs font-mono tracking-wider uppercase text-neutral-200 border border-white/20 rounded-md hover:bg-white hover:text-black hover:border-white transition-all duration-200" href="#passes">
+          Get Pass
+        </a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden" data-purpose="hero-banner">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Hero Left Column: Editorial Announcement -->
+<div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+<!-- Breadcrumb Badge -->
+<div class="inline-flex items-center space-x-2 text-[11px] font-mono text-neutral-400 border border-white/10 rounded-full px-3 py-1 bg-white/[0.02] w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+<span class="tracking-widest uppercase">UNTOLD PRODUCTIONS · CHAPTER 01</span>
+</div>
+<!-- Massive Stylized Title -->
+<div class="space-y-1">
+<h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-cinzel font-black tracking-tight text-white uppercase leading-[0.88] select-none">
+                LAUGH<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-100 to-white">TALE</span>
+</h1>
+<p class="font-mono text-xs sm:text-sm tracking-[0.3em] uppercase text-neutral-400 pt-2">
+                BY UNTOLD PRODUCTIONS
+              </p>
+</div>
+<!-- Editorial Tagline -->
+<div class="pt-2">
+<h2 class="text-2xl sm:text-3xl md:text-4xl text-neutral-200 leading-snug">
+                The party for the right people. <span class="font-editorial-italic text-amber-300 text-3xl sm:text-4xl md:text-5xl font-normal block sm:inline">An anime voyage into the clouds.</span>
+</h2>
+</div>
+<!-- Narrative Copy -->
+<p class="text-neutral-400 text-sm sm:text-base leading-relaxed max-w-xl font-normal">
+              Sunday afternoon, five hours, one room at Pawffe. Live band, DJ night, high energy anime anthems, cosplay showcase, gaming stalls, and absolute zero compromise on vibes.
+            </p>
+<!-- Pill Information Bar -->
+<div class="py-2.5 px-4 rounded-lg bg-neutral-900/80 border border-white/10 max-w-lg">
+<p class="text-[11px] sm:text-xs font-mono text-neutral-300">
+                Curated music, anime stalls, food, and high-frequency community energy.
+              </p>
+</div>
+<!-- Hero Action Buttons -->
+<div class="flex flex-wrap gap-4 pt-2">
+<a class="inline-flex items-center justify-center px-7 py-3 text-xs font-mono uppercase tracking-[0.2em] font-semibold text-black bg-white rounded-md hover:bg-amber-300 transition-colors shadow-lg shadow-white/10" href="#passes">
+<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                GET PASSES
+              </a>
+<a class="inline-flex items-center justify-center px-7 py-3 text-xs font-mono uppercase tracking-[0.2em] font-medium text-neutral-300 border border-white/15 rounded-md hover:border-amber-300 hover:text-white transition-colors bg-white/[0.02]" href="#venue">
+<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                THE VENUE
+              </a>
+</div>
+<!-- Meta Quick Details Line -->
+<div class="pt-4 flex flex-wrap items-center gap-6 text-[11px] font-mono uppercase tracking-wider text-neutral-500 border-t border-white/[0.06]">
+<div><span class="text-neutral-300">DATE:</span> SUN 06 DEC</div>
+<div><span class="text-neutral-300">HOURS:</span> 12 – 5 PM</div>
+<div><span class="text-neutral-300">LOCATION:</span> PAWFFE</div>
+</div>
+</div>
+<!-- Hero Right Column: Angled Official Poster Card -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end">
+<div class="relative w-full max-w-sm sm:max-w-md group">
+<!-- Glow accent behind poster -->
+<div class="absolute -inset-1.5 bg-gradient-to-tr from-amber-500/20 via-sky-500/20 to-amber-300/10 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000"></div>
+<!-- Poster Presentation Box -->
+<div class="relative glass-card rounded-2xl p-3 border border-white/15 overflow-hidden shadow-2xl">
+<div class="relative aspect-[1005/1565] w-full rounded-xl overflow-hidden bg-neutral-950">
+<img alt="LAUGH TALE Official Poster by UNTOLD" class="w-full h-full object-cover rounded-lg transform transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA33lvAXQO_vPnxS47RkE8Qj4Ij9tt-HnjZQmSOyiCsHJrvzqjdge-kBAnWDC-iTNmxSCy9iaECPEA-uAAULzgSP1XdMiZh4Z6Wz175rXjeJyJ-T0viE5mon2Wv4J4ydHYUkkThWfk9w4BqKR8I1dE0DD0aAhXkQ91HjRLoHhecgj44VVNlr10SbSPg_9yJWd3QZPcb1_YEb9lgYKnaA3jTIIfzrDTXfIpVW-R4QnpvkUk0fefd4FEo">
+<!-- Poster overlay vignette -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20 pointer-events-none"></div>
+<!-- Floating badge inside poster preview -->
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[10px] font-mono tracking-widest text-neutral-300 uppercase px-3 py-1.5 rounded bg-black/60 backdrop-blur-md border border-white/10">
+<span class="text-amber-400 font-bold">LIMITED ACCESS</span>
+<span>DEC 06 · PAWFFE</span>
+</div>
+</div>
+<!-- Card footer label -->
+<div class="mt-3 flex items-center justify-between px-2 text-[10px] font-mono tracking-widest text-neutral-400 uppercase">
+<span>THE POSTER</span>
+<span class="text-neutral-600">•</span>
+<span>DEC 06</span>
+<span class="text-neutral-600">•</span>
+<span>HYDERABAD</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: RunningTicker -->
+<div class="border-y border-white/[0.08] bg-[#070b12] overflow-hidden py-3" data-purpose="announcement-ticker">
+<div class="flex whitespace-nowrap marquee-inner">
+<div class="flex items-center space-x-8 text-xs font-mono tracking-[0.25em] uppercase text-neutral-400 shrink-0">
+<span>SUN 06 DEC</span>
+<span class="text-amber-400">•</span>
+<span>12 – 5 PM</span>
+<span class="text-amber-400">•</span>
+<span>PAWFFE</span>
+<span class="text-amber-400">•</span>
+<span>UNTOLD PRESENTS</span>
+<span class="text-amber-400">•</span>
+<span class="text-white font-bold">LAUGH TALE</span>
+<span class="text-amber-400">•</span>
+<span>LIVE BAND &amp; DJ NIGHT</span>
+<span class="text-amber-400">•</span>
+<span>ANIME STALLS</span>
+<span class="text-amber-400">•</span>
+<span>COSPLAY SHOWCASE</span>
+<span class="text-amber-400">•</span>
+<span>GAMES &amp; CRACKER SHOW</span>
+<span class="text-amber-400">•</span>
+</div>
+<!-- Duplicate for continuous loop -->
+<div class="flex items-center space-x-8 text-xs font-mono tracking-[0.25em] uppercase text-neutral-400 shrink-0 pl-8">
+<span>SUN 06 DEC</span>
+<span class="text-amber-400">•</span>
+<span>12 – 5 PM</span>
+<span class="text-amber-400">•</span>
+<span>PAWFFE</span>
+<span class="text-amber-400">•</span>
+<span>UNTOLD PRESENTS</span>
+<span class="text-amber-400">•</span>
+<span class="text-white font-bold">LAUGH TALE</span>
+<span class="text-amber-400">•</span>
+<span>LIVE BAND &amp; DJ NIGHT</span>
+<span class="text-amber-400">•</span>
+<span>ANIME STALLS</span>
+<span class="text-amber-400">•</span>
+<span>COSPLAY SHOWCASE</span>
+<span class="text-amber-400">•</span>
+<span>GAMES &amp; CRACKER SHOW</span>
+<span class="text-amber-400">•</span>
+</div>
+</div>
+</div>
+<!-- END: RunningTicker -->
+<!-- BEGIN: EditorialManifesto -->
+<section class="py-24 border-b border-white/[0.06] relative" data-purpose="manifesto-section" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Index Identifier -->
+<div class="font-mono text-xs text-neutral-400 tracking-[0.2em] mb-8">
+          [ 01 ] WHAT THIS IS
+        </div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Manifesto Left Column -->
+<div class="lg:col-span-8 space-y-8">
+<h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-neutral-100 tracking-tight leading-tight">
+              A day festival for everyone <span class="font-editorial-italic text-amber-300">dreaming of the Grand Line</span> and raw collective sound.
+            </h2>
+<div class="space-y-5 text-neutral-400 text-base sm:text-lg leading-relaxed max-w-3xl">
+<p>
+                LAUGH TALE isn't an awkward convention floor. It's a five-hour explosive anime gathering packed with high-octane DJ performances, live musical acts, curated merchandise booths, gaming zones, and cosplay energy that doesn't hold back.
+              </p>
+<p>
+                Doors open at high noon, lights drop, and the room moves as one. No corporate fluff, no awkward seating—just sound, lights, anime fever, and people who share the exact same obsession.
+              </p>
+<p class="text-neutral-200 font-medium pt-2">
+                Bring the crew you actually like. That's the whole guest policy.
+              </p>
+</div>
+<!-- Attractions Badges Teaser -->
+<div class="pt-4">
+<div class="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-3">CONFIRMED ATTRACTIONS</div>
+<div class="flex flex-wrap gap-2.5">
+<span class="px-3 py-1.5 rounded-full text-xs font-mono bg-white/[0.03] border border-white/10 text-neutral-300">LIVE BAND</span>
+<span class="px-3 py-1.5 rounded-full text-xs font-mono bg-amber-400/10 border border-amber-400/30 text-amber-300">DJ NIGHT</span>
+<span class="px-3 py-1.5 rounded-full text-xs font-mono bg-white/[0.03] border border-white/10 text-neutral-300">ANIME STALLS</span>
+<span class="px-3 py-1.5 rounded-full text-xs font-mono bg-white/[0.03] border border-white/10 text-neutral-300">COSPLAY SHOWCASE</span>
+<span class="px-3 py-1.5 rounded-full text-xs font-mono bg-white/[0.03] border border-white/10 text-neutral-300">GAMING STATIONS</span>
+<span class="px-3 py-1.5 rounded-full text-xs font-mono bg-white/[0.03] border border-white/10 text-neutral-300">CRACKER SHOW</span>
+<span class="px-3 py-1.5 rounded-full text-xs font-mono bg-sky-500/10 border border-sky-400/30 text-sky-300">+ MORE REVEALING SOON</span>
+</div>
+</div>
+</div>
+<!-- Manifesto Right Column: Minimalist Numbers -->
+<div class="lg:col-span-4 flex flex-col justify-start lg:pl-12 space-y-10 border-t lg:border-t-0 lg:border-l border-white/[0.08] pt-10 lg:pt-0">
+<div>
+<div class="text-5xl sm:text-6xl font-cinzel font-light text-white">5</div>
+<div class="text-[11px] font-mono tracking-widest uppercase text-neutral-400 mt-1">HOURS OF RAW ENERGY</div>
+</div>
+<div>
+<div class="text-5xl sm:text-6xl font-cinzel font-light text-white">0</div>
+<div class="text-[11px] font-mono tracking-widest uppercase text-neutral-400 mt-1">GATEKEEPING OR ELITISM</div>
+</div>
+<div>
+<div class="text-5xl sm:text-6xl font-cinzel font-light text-amber-300">∞</div>
+<div class="text-[11px] font-mono tracking-widest uppercase text-neutral-400 mt-1">MEMORIES &amp; HIGH-OCTANE NOSTALGIA</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: EditorialManifesto -->
+<!-- BEGIN: GiantCenterpieceBillboard -->
+<section class="relative py-24 md:py-32 bg-black overflow-hidden border-b border-white/[0.06]" data-purpose="giant-billboard">
+<!-- Background textured atmosphere -->
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(#ef4444_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+<!-- Giant Glowing Billboard Title mirroring UTOPIA style -->
+<h2 class="text-7xl sm:text-8xl md:text-9xl lg:text-[11.5rem] font-cinzel font-black tracking-tight text-red-600 text-glow-red leading-none select-none uppercase">
+          LAUGH TALE
+        </h2>
+<p class="font-mono text-sm sm:text-lg md:text-xl tracking-[0.35em] sm:tracking-[0.45em] text-neutral-300 font-bold uppercase mt-4 md:mt-6">
+          THE PARTY FOR THE RIGHT PEOPLE.
+        </p>
+<p class="font-editorial-italic text-neutral-400 text-lg sm:text-xl mt-3 max-w-xl mx-auto">
+          "One piece of advice: bring your stamina, wear your best fit, and leave nothing behind."
+        </p>
+</div>
+</section>
+<!-- END: GiantCenterpieceBillboard -->
+<!-- BEGIN: DetailsAndCountdown -->
+<section class="py-24 border-b border-white/[0.06] relative" data-purpose="venue-and-countdown" id="venue">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Index Identifier -->
+<div class="font-mono text-xs text-neutral-400 tracking-[0.2em] mb-8">
+          [ 02 ] THE DETAILS
+        </div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Venue Details Left Column -->
+<div class="lg:col-span-6 space-y-8">
+<div>
+<h3 class="text-4xl sm:text-5xl font-cinzel font-semibold text-white tracking-wide">
+                Pawffe
+              </h3>
+<p class="font-editorial-italic text-2xl text-amber-300 mt-1">
+                Hyderabad Chapter Grounds
+              </p>
+<p class="text-neutral-400 text-sm sm:text-base mt-4 max-w-md">
+                Cozy intimate interiors, loud sound rig, and spaces set up for stalls, gaming, and dancing the afternoon away.
+              </p>
+</div>
+<!-- Get Directions Action Button -->
+<div>
+<a class="inline-flex items-center space-x-2 text-xs font-mono uppercase tracking-[0.2em] px-4 py-2.5 rounded border border-white/20 text-neutral-200 hover:border-amber-400 hover:text-amber-300 transition-colors bg-white/[0.02]" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span>GET DIRECTIONS</span>
+<span>↗</span>
+</a>
+</div>
+<!-- Detailed Event Schedule List -->
+<div class="space-y-6 pt-4">
+<!-- Item 1: Date -->
+<div class="flex items-start space-x-4">
+<div class="w-10 h-10 rounded-lg bg-white/[0.03] border border-white/10 flex items-center justify-center text-amber-400 shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<div class="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">DATE</div>
+<div class="text-base font-semibold text-white">SUNDAY, DECEMBER 06</div>
+<div class="text-xs text-neutral-400">A Sunday afternoon made for pure escapism.</div>
+</div>
+</div>
+<!-- Item 2: Time -->
+<div class="flex items-start space-x-4">
+<div class="w-10 h-10 rounded-lg bg-white/[0.03] border border-white/10 flex items-center justify-center text-amber-400 shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<div class="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">TIME</div>
+<div class="text-base font-semibold text-white">12:00 PM – 5:00 PM</div>
+<div class="text-xs text-neutral-400">Doors open at noon. Arrive early for prime stall merch and front-row sets.</div>
+</div>
+</div>
+<!-- Item 3: Venue -->
+<div class="flex items-start space-x-4">
+<div class="w-10 h-10 rounded-lg bg-white/[0.03] border border-white/10 flex items-center justify-center text-amber-400 shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<div class="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">VENUE</div>
+<div class="text-base font-semibold text-white">Pawffe Cafe &amp; Event Arena</div>
+<div class="text-xs text-neutral-400">Hyderabad — full venue mapped and accessible.</div>
+</div>
+</div>
+<!-- Item 4: Lineup -->
+<div class="flex items-start space-x-4">
+<div class="w-10 h-10 rounded-lg bg-white/[0.03] border border-white/10 flex items-center justify-center text-amber-400 shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<div class="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">LINEUP INCLUSIONS</div>
+<div class="text-base font-semibold text-white">DJ NIGHT + LIVE BAND + STALLS</div>
+<div class="text-xs text-neutral-400">Non-stop curated program, special cosplay spotlight &amp; games.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Countdown and Energy Photo Card Right Column -->
+<div class="lg:col-span-6 space-y-6">
+<!-- Live Digital Flip Clock Card -->
+<div class="glass-card rounded-2xl p-6 border border-white/10 shadow-xl" data-purpose="countdown-clock">
+<div class="flex items-center justify-between text-[11px] font-mono tracking-widest text-neutral-400 uppercase mb-4">
+<span>DOORS OPEN IN</span>
+<span class="text-amber-400 font-semibold">06 DEC 2026</span>
+</div>
+<!-- Clock Grid -->
+<div class="grid grid-cols-4 gap-3 text-center">
+<div class="bg-black/50 border border-white/10 rounded-xl p-3">
+<div class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-white" id="days">17</div>
+<div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mt-1">DAYS</div>
+</div>
+<div class="bg-black/50 border border-white/10 rounded-xl p-3">
+<div class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-white" id="hours">14</div>
+<div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mt-1">HRS</div>
+</div>
+<div class="bg-black/50 border border-white/10 rounded-xl p-3">
+<div class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-white" id="minutes">11</div>
+<div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mt-1">MIN</div>
+</div>
+<div class="bg-black/50 border border-white/10 rounded-xl p-3">
+<div class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-amber-400" id="seconds">23</div>
+<div class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 mt-1">SEC</div>
+</div>
+</div>
+</div>
+<!-- Secondary Atmospheric Image Card -->
+<div class="glass-card rounded-2xl p-4 border border-white/10 overflow-hidden relative group">
+<div class="relative h-60 sm:h-72 w-full rounded-xl overflow-hidden bg-neutral-900">
+<!-- Concert energy stock backdrop matching the Utopia crowd photo -->
+<img alt="Atmosphere at Laugh Tale" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-75 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzqBtP7ZeDDz2AE3XcLVJNPGPxS5mRZ8fAlrTs60naiOISDgS6VBnAZfkvdvkNfK9hSpMDJ8Vl88wWS5-Go7f0VyfH6fql-2gm3O_l6bfs9IDy5KmVtb5ncvLeys3BdFo4zCMLU1m5BI6XLnxEx-76UxvErvLl-rgQTaqqoTT2sRfc9J7M7MSeGYGUX8_HdLV3ORp5qyo3A2geLwrA_VBlun0C7cOSRg71LUr7I8A">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+<!-- Bottom caption -->
+<div class="absolute bottom-4 left-4 right-4">
+<div class="text-[10px] font-mono tracking-widest text-amber-400 uppercase">ANIME RAVE · DEC 06</div>
+<div class="text-lg font-editorial-italic text-white">Same energy. Earlier start.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: DetailsAndCountdown -->
+<!-- BEGIN: PassesSection -->
+<section class="py-24 border-b border-white/[0.06] relative" data-purpose="ticketing-passes" id="passes">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Index Identifier -->
+<div class="font-mono text-xs text-neutral-400 tracking-[0.2em] mb-4">
+          [ 03 ] THE PASSES
+        </div>
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<h2 class="text-4xl sm:text-5xl font-light text-white tracking-tight">
+              One pass. <span class="font-editorial-italic text-amber-300">Claim your bounty.</span>
+</h2>
+</div>
+<div class="mt-4 md:mt-0 text-right">
+<p class="text-xs text-neutral-400 font-mono">
+              Early Bird tier is the lowest rate — price increases as tiers fill up.
+            </p>
+<div class="flex items-center space-x-4 mt-2 text-[10px] font-mono text-neutral-400">
+<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5"></span> EMAIL VERIFIED</span>
+<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 mr-1.5"></span> INSTANT PASS HOLD</span>
+<span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 mr-1.5"></span> QR ENTRY</span>
+</div>
+</div>
+</div>
+<!-- Featured Pass Card Container (Centered focused layout) -->
+<div class="max-w-xl mx-auto">
+<div class="glass-card rounded-2xl p-8 border-2 border-amber-400/40 relative shadow-2xl glass-card-hover">
+<!-- Tier Tag -->
+<div class="flex items-center justify-between mb-6">
+<span class="font-mono text-[11px] text-neutral-400 uppercase tracking-widest">01 / GENERAL ADMISSION</span>
+<span class="px-3 py-1 text-[10px] font-mono tracking-widest text-amber-300 bg-amber-400/10 border border-amber-400/30 rounded-full font-bold uppercase">
+                EARLY BIRD RATE
+              </span>
+</div>
+<!-- Pass Title & Price -->
+<div class="border-b border-white/10 pb-6 mb-6">
+<h3 class="text-3xl font-cinzel font-bold text-white tracking-wide uppercase">
+                EARLY BIRD PASS
+              </h3>
+<div class="flex items-baseline space-x-2 mt-2">
+<span class="text-5xl font-cinzel font-extrabold text-amber-300">₹349</span>
+<span class="text-xs font-mono text-neutral-400 tracking-wider uppercase">/ PERSON</span>
+</div>
+<p class="text-xs text-neutral-400 mt-2 font-normal">
+                Full five-hour all-inclusive access to the live sets, DJ arena, anime marketplace, and community zones.
+              </p>
+</div>
+<!-- Detailed Perks Checklist -->
+<div class="space-y-3.5 mb-8 text-xs font-mono text-neutral-300">
+<div class="flex items-start space-x-2.5">
+<span class="text-amber-400 font-bold">✓</span>
+<span>Guaranteed entry from 12:00 PM onwards</span>
+</div>
+<div class="flex items-start space-x-2.5">
+<span class="text-amber-400 font-bold">✓</span>
+<span>Full access to Live Band and high-voltage DJ Night sets</span>
+</div>
+<div class="flex items-start space-x-2.5">
+<span class="text-amber-400 font-bold">✓</span>
+<span>Anime merch market stalls &amp; collector showcase zones</span>
+</div>
+<div class="flex items-start space-x-2.5">
+<span class="text-amber-400 font-bold">✓</span>
+<span>Cosplay parade entry &amp; interactive photo backdrops</span>
+</div>
+<div class="flex items-start space-x-2.5">
+<span class="text-amber-400 font-bold">✓</span>
+<span>Interactive gaming booths and cracker finale show</span>
+</div>
+<div class="flex items-start space-x-2.5 text-neutral-400">
+<span class="text-amber-400 font-bold">✓</span>
+<span>Digital commemorative QR ticket delivered to email</span>
+</div>
+</div>
+<!-- Action Button -->
+<div>
+<button class="w-full py-4 px-6 rounded-lg bg-amber-400 text-black font-mono font-bold text-xs uppercase tracking-[0.25em] hover:bg-white hover:text-black transition-all duration-200 shadow-xl shadow-amber-400/20">
+                BUY PASS — ₹349
+              </button>
+<p class="text-center text-[10px] font-mono text-neutral-400 uppercase tracking-widest mt-3">
+                TICKETS ARE SECURED INSTANTLY VIA QR PROTOCOL
+              </p>
+</div>
+</div>
+<!-- Bottom Assurance Text -->
+<div class="text-center text-xs font-mono text-neutral-400 mt-6">
+            Passes are issued in strictly limited batches. Contact: <a class="underline hover:text-amber-300" href="mailto:tickets@untoldproductions.in">untold@laugh-tale.com</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PassesSection -->
+<!-- BEGIN: HouseRules -->
+<section class="py-24 border-b border-white/[0.06] relative" data-purpose="house-rules" id="rules">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Index Identifier -->
+<div class="font-mono text-xs text-neutral-400 tracking-[0.2em] mb-8">
+          [ 04 ] HOUSE RULES
+        </div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Rules Headline Left -->
+<div class="lg:col-span-5 space-y-4">
+<h2 class="text-4xl sm:text-5xl font-light text-white tracking-tight">
+              Two rules. <br><span class="font-editorial-italic text-amber-300">The first one is the party.</span>
+</h2>
+<p class="text-neutral-400 text-sm leading-relaxed max-w-sm pt-2">
+              UNTOLD creates a space where community, freedom, and music collide. Everything else is negotiable—the outfit, the energy, the songs you scream along to.
+            </p>
+</div>
+<!-- Rules Cards Right -->
+<div class="lg:col-span-7 space-y-4">
+<!-- Rule 1: Cosplay & Community Etiquette -->
+<div class="glass-card rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all">
+<div class="flex items-start space-x-4">
+<div class="w-8 h-8 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center font-mono font-bold text-sm shrink-0 border border-red-500/20">
+                  !
+                </div>
+<div class="space-y-2">
+<h4 class="text-base font-cinzel font-semibold text-white tracking-wide">
+                    Respect the Cosplay &amp; Community.
+                  </h4>
+<p class="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                    Cosplay is not consent. Ask before clicking pictures, respect fellow crewmates, and leave the gatekeeping outside. Any disruptive behaviour or harassment results in immediate ejection with zero refund.
+                  </p>
+</div>
+</div>
+</div>
+<!-- Rule 2: Pass Policy & Transfer -->
+<div class="glass-card rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all">
+<div class="flex items-start space-x-4">
+<div class="w-8 h-8 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center font-mono font-bold text-sm shrink-0 border border-amber-500/20">
+                  ↺
+                </div>
+<div class="space-y-2">
+<h4 class="text-base font-cinzel font-semibold text-white tracking-wide">
+                    Pass Transfer &amp; Integrity.
+                  </h4>
+<p class="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                    Passes are non-refundable once booked, but you are free to transfer them to a friend or crew member if your plans change. Bring valid digital ticket QR for scan at the door.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HouseRules -->
+<!-- BEGIN: WhosThrowingIt -->
+<section class="py-24 border-b border-white/[0.06] relative" data-purpose="organizer-profile">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Organizer Official Logo Card Left -->
+<div class="lg:col-span-5 flex justify-center">
+<div class="relative w-full max-w-md group">
+<!-- Glow outline -->
+<div class="absolute -inset-1 bg-gradient-to-r from-red-500/20 to-blue-500/20 rounded-2xl blur-lg opacity-75"></div>
+<div class="relative glass-card rounded-2xl p-6 border border-white/15 overflow-hidden text-center flex flex-col items-center justify-center min-h-[300px]">
+<img alt="UNTOLD Official Logo" class="w-64 sm:w-72 object-contain filter drop-shadow-2xl transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV3WXHKzrtDhyGn_imHYqsQhW_FxtZU1jJe4HZjUMJd71PEq3uNijhtTNERlhNMENa9l1tNjt5bCZvWP9RIkf_gXoIvXMIkxFBDTZkPA2L4VMevf1VBdQFdzvTfdvlIAOwjAsDRRyikG6U5fhffzt7frAKBqPgdUqSjfyt7qBvnVjMRcGgnEKKTBs69QeDGZd298nGRfKNVpRidSdYyqK1kUA64orOE6b6k1UDENMF-0_HGeEz4Wz4">
+<div class="mt-6 text-[10px] font-mono tracking-[0.3em] uppercase text-neutral-400">
+                  COLLECTIVE CULTURE ARCHITECTS
+                </div>
+</div>
+</div>
+</div>
+<!-- Organizer Story Right -->
+<div class="lg:col-span-7 space-y-6">
+<div class="font-mono text-xs text-neutral-400 tracking-[0.2em]">
+              [ 05 ] WHO'S THROWING IT
+            </div>
+<h3 class="text-4xl sm:text-5xl font-cinzel font-bold text-white tracking-wide">
+              UNTOLD
+            </h3>
+<p class="text-neutral-400 text-base sm:text-lg leading-relaxed max-w-2xl font-light">
+              We put on rooms, not ordinary events. Sound first, lights second, everything else third. <strong class="text-white font-medium">LAUGH TALE</strong> is our December chapter — the grand voyage we've been teasing on the grid all season long.
+            </p>
+<blockquote class="font-editorial-italic text-2xl sm:text-3xl text-amber-300 pt-2 border-l-2 border-amber-400 pl-4">
+              "Something different. Something big."
+            </blockquote>
+<div class="pt-4 flex items-center space-x-6 text-xs font-mono tracking-widest text-neutral-400 uppercase">
+<a class="hover:text-amber-300 transition-colors flex items-center" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<span>INSTAGRAM</span>
+<span class="ml-1 text-[10px]">↗</span>
+</a>
+<span>•</span>
+<a class="hover:text-amber-300 transition-colors flex items-center" href="#passes">
+<span>OFFICIAL CHAPTER 01</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: WhosThrowingIt -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="pt-20 pb-12 bg-[#030508] relative overflow-hidden" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Footer Top Columns -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-16 border-b border-white/[0.08]">
+<!-- Col 1: About Blurb -->
+<div class="md:col-span-2 space-y-4">
+<div class="font-cinzel tracking-[0.2em] text-white font-bold text-lg">UNTOLD</div>
+<p class="text-xs text-neutral-400 leading-relaxed max-w-sm">
+            LAUGH TALE is our December chapter — one Sunday afternoon, one room, and a crowd that came to dive headfirst into the grand line sound. If that sounds like your people, you already know what to do.
+          </p>
+<div class="pt-2">
+<a class="text-xs font-mono text-amber-300 hover:underline" href="mailto:info@untoldproductions.in">
+              HELLO@UNTOLDPRODUCTIONS.IN ↗
+            </a>
+</div>
+</div>
+<!-- Col 2: Social / Community -->
+<div class="space-y-3">
+<div class="text-[10px] font-mono tracking-widest uppercase text-neutral-400">FOLLOW</div>
+<ul class="text-xs font-mono space-y-2 text-neutral-300">
+<li><a class="hover:text-amber-300 transition-colors" href="https://instagram.com">@UNTOLD.EXP</a></li>
+<li><a class="hover:text-amber-300 transition-colors" href="https://discord.com">COMMUNITY SERVER</a></li>
+<li><a class="hover:text-amber-300 transition-colors" href="#">SPOTIFY PLAYLIST</a></li>
+</ul>
+</div>
+<!-- Col 3: Coordinates -->
+<div class="space-y-3">
+<div class="text-[10px] font-mono tracking-widest uppercase text-neutral-400">THE DETAILS</div>
+<div class="text-xs font-mono space-y-1 text-neutral-300">
+<p>SUNDAY, DECEMBER 06</p>
+<p>12:00 PM – 5:00 PM</p>
+<p>PAWFFE, HYDERABAD</p>
+</div>
+<div class="pt-2">
+<a class="text-xs font-mono text-neutral-400 hover:text-white transition-colors" href="#venue">
+              OPEN IN MAPS ↗
+            </a>
+</div>
+</div>
+</div>
+<!-- Giant Monolithic Footer Typography Stamp -->
+<div class="pt-12 select-none overflow-hidden text-center">
+<h2 class="text-6xl sm:text-8xl md:text-9xl lg:text-[13rem] font-cinzel font-black tracking-tight text-white/[0.04] leading-none uppercase">
+          LAUGH TALE
+        </h2>
+</div>
+<!-- Copyright Bar -->
+<div class="mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-neutral-400 tracking-wider">
+<div>© 2026 UNTOLD PRODUCTIONS. ALL RIGHTS RESERVED.</div>
+<div class="mt-2 sm:mt-0 uppercase">THE PARTY FOR THE RIGHT PEOPLE.</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: InteractiveScripts -->
+<!-- Countdown live timer simulation script -->
+<script data-purpose="countdown-timer">
+    (function initCountdown() {
+      // Set future event date for countdown realism
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 18);
+      targetDate.setHours(12, 0, 0, 0);
+
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minsEl = document.getElementById('minutes');
+      const secsEl = document.getElementById('seconds');
+
+      function updateClock() {
+        const now = new Date().getTime();
+        const difference = targetDate.getTime() - now;
+
+        if (difference > 0) {
+          const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+          const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+          const s = Math.floor((difference % (1000 * 60)) / 1000);
+
+          if (daysEl) daysEl.innerText = String(d).padStart(2, '0');
+          if (hoursEl) hoursEl.innerText = String(h).padStart(2, '0');
+          if (minsEl) minsEl.innerText = String(m).padStart(2, '0');
+          if (secsEl) secsEl.innerText = String(s).padStart(2, '0');
+        }
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    })();
+  </script>
+<!-- END: InteractiveScripts -->
+
+
+</body></html>
