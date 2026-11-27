@@ -33,8 +33,18 @@ const bebasNeue = Bebas_Neue({
   variable: '--font-bebas-neue',
 })
 
+function getSafeMetadataBase(): URL {
+  const raw = (process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000').trim()
+  const withProtocol = /^https?:\/\//i.test(raw) ? raw : `https://${raw}`
+  try {
+    return new URL(withProtocol)
+  } catch {
+    return new URL('http://localhost:3000')
+  }
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
+  metadataBase: getSafeMetadataBase(),
   title: 'LAUGH TALE by UNTOLD — Dec 06 Pawffe Vizag',
   description: 'The party for the right people. An anime voyage into the clouds. Sunday, Dec 06 at Pawffe, Beach Rd, Sagar Nagar, Vizag.',
   keywords: ['LAUGH TALE', 'UNTOLD', 'Anime Festival', 'Pawffe', 'Pawffe Vizag', 'Vizag Events', 'Visakhapatnam', 'Cosplay', 'Anime Party'],
