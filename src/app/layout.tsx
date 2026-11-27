@@ -1,37 +1,5 @@
 import type { Metadata } from 'next'
-import { Cinzel, Instrument_Serif, Plus_Jakarta_Sans, Space_Mono, Bebas_Neue } from 'next/font/google'
 import './globals.css'
-
-const cinzel = Cinzel({
-  subsets: ['latin'],
-  weight: ['500', '700', '800', '900'],
-  variable: '--font-cinzel',
-})
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ['latin'],
-  weight: ['400'],
-  style: ['normal', 'italic'],
-  variable: '--font-instrument',
-})
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-plus-jakarta',
-})
-
-const spaceMono = Space_Mono({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-space-mono',
-})
-
-const bebasNeue = Bebas_Neue({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-bebas-neue',
-})
 
 function getSafeMetadataBase(): URL {
   const raw = (process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000').trim()
@@ -62,10 +30,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={`scroll-smooth ${cinzel.variable} ${instrumentSerif.variable} ${plusJakartaSans.variable} ${spaceMono.variable} ${bebasNeue.variable}`}
-    >
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="font-sans antialiased text-neutral-300 selection:bg-amber-400 selection:text-black min-h-screen">
         {children}
       </body>
